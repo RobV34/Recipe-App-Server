@@ -14,7 +14,7 @@ public class RecipeManagerService {
         List<Recipe> matchingRecipes = new ArrayList<>();
 
         for (Recipe recipe : recipeArrayList) {
-            if (checkIngredientInRecipe(recipe, userIngredients)) {
+            if (checkIngredientInUserList(recipe, userIngredients)) {
                 matchingRecipes.add(recipe);
             }
         }
@@ -23,21 +23,15 @@ public class RecipeManagerService {
     }
 
 
-    public Boolean checkIngredientInRecipe(Recipe recipe, List<Ingredient> userIngredients) {
-        for (Ingredient userIngredient : userIngredients) {
-            boolean ingredientFound = false;
-            for (Ingredient recipeIngredient : recipe.getIngredientArrayList()) {
-                if (recipeIngredient.getName().equals(userIngredient.getName())) {
-                    ingredientFound = true;
-                    break;
-                }
-            }
-            if (!ingredientFound) {
+    public Boolean checkIngredientInUserList(Recipe recipe, List<Ingredient> userIngredients) {
+        for (Ingredient recipeIngredient : recipe.getIngredientArrayList()) {
+            if (!userIngredients.contains(recipeIngredient)) {
                 return false;
             }
         }
         return true;
     }
+
 
     public Recipe addRecipe(Recipe newRecipe) {
         recipeArrayList.add(newRecipe);
