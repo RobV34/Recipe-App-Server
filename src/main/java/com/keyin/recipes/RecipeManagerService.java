@@ -1,40 +1,42 @@
 package com.keyin.recipes;
 
+import org.springframework.stereotype.Service;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import org.springframework.stereotype.Service;
+import java.util.stream.Collectors;
 
 @Service
 public class RecipeManagerService {
+    private List<Recipe> recipeArrayList = new ArrayList<>();
 
-    private List<Recipe> recipeArrayList = new ArrayList<Recipe>();
+    public List<Recipe> getAllRecipes() {
+        return recipeArrayList;
+    }
+
+    public Recipe addRecipe(Recipe recipe) {
+        recipeArrayList.add(recipe);
+        return recipe;
+    }
+
+    public Recipe getRecipe(String name) {
+        return recipeArrayList.stream()
+                .filter(recipe -> recipe.getName().equals(name))
+                .findFirst()
+                .orElse(null);
+    }
+
+    public void deleteRecipe(String name) {
+        recipeArrayList.removeIf(recipe -> recipe.getName().equals(name));
+    }
 
     public List<Recipe> searchRecipeManagerByUserIngredients(List<Ingredient> userIngredients) {
-        List<Recipe> matchingRecipes = new ArrayList<>();
-
-        for (Recipe recipe : recipeArrayList) {
-            if (checkIngredientInUserList(recipe, userIngredients)) {
-                matchingRecipes.add(recipe);
-            }
-        }
-
-        return matchingRecipes;
-    }
-
-
-    public Boolean checkIngredientInUserList(Recipe recipe, List<Ingredient> userIngredients) {
-        for (Ingredient recipeIngredient : recipe.getIngredientArrayList()) {
-            if (!userIngredients.contains(recipeIngredient)) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-
-    public Recipe addRecipe(Recipe newRecipe) {
-        recipeArrayList.add(newRecipe);
-        return newRecipe;
+        return recipeArrayList.stream()
+                .filter(recipe -> recipe.getIngredients().stream()
+                        .allMatch(ingredient -> userIngredients.stream()
+                                .anyMatch(userIngredient -> userIngredient.getName().equalsIgnoreCase(ingredient.getName()))))
+                .collect(Collectors.toList());
     }
 }
+
+
