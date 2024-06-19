@@ -1,4 +1,4 @@
-package com.keyin.recipes;
+package com.recipe.recipes;
 
 import org.springframework.stereotype.Service;
 
@@ -37,6 +37,8 @@ public class RecipeManagerService {
                                 .anyMatch(userIngredient -> userIngredient.getName().equalsIgnoreCase(ingredient.getName()))))
                 .collect(Collectors.toList());
     }
+
+
 }
 
 

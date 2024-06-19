@@ -1,4 +1,4 @@
-package com.keyin.recipes;
+package com.recipe.recipes;
 
 import java.util.ArrayList;
 

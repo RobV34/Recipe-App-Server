@@ -1,6 +1,6 @@
-package com.keyin.users;
+package com.recipe.users;
 
-import com.keyin.recipes.Ingredient;
+import com.recipe.recipes.Ingredient;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.keyin.users;
+package com.recipe.users;
 
 
 import org.springframework.beans.factory.annotation.Autowired;

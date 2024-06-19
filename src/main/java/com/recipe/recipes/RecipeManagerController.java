@@ -1,6 +1,6 @@
-package com.keyin.recipes;
+package com.recipe.recipes;
 
-import com.keyin.users.User;
+import com.recipe.users.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
