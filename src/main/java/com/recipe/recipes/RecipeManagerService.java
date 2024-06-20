@@ -26,8 +26,9 @@ public class RecipeManagerService {
                 .orElse(null);
     }
 
-    public void deleteRecipe(String name) {
+    public String deleteRecipe(String name) {
         recipeArrayList.removeIf(recipe -> recipe.getName().equals(name));
+        return "Recipe removed from list";
     }
 
     public List<Recipe> searchRecipeManagerByUserIngredients(List<Ingredient> userIngredients) {
@@ -39,6 +40,15 @@ public class RecipeManagerService {
     }
 
 
+    public Recipe getSingleRecipeByName(String recipeName) {
+
+    for (Recipe recipe : recipeArrayList) {
+        if (recipe.getName().equalsIgnoreCase(recipeName)) {
+            return recipe;
+        }
+    }
+    return null;
+    }
 }
 
 

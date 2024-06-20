@@ -13,6 +13,23 @@ public class RecipeManagerController {
     @Autowired
     private RecipeManagerService recipeManagerService;
 
+    @GetMapping("recipe")
+    public String getHomeMessage() {
+        return "Recipe Application";
+    }
+
+
+    @GetMapping("recipe/{recipeName}")
+    public Recipe getRecipeByName(@PathVariable String recipeName) {
+        return recipeManagerService.getSingleRecipeByName(recipeName);
+
+    }
+
+    @GetMapping("recipes")
+    public List<Recipe> getAllRecipes() {
+        return recipeManagerService.getAllRecipes();
+    }
+
     @GetMapping("recipe/userMatches")
     public List<Recipe> searchForRecipesByUserIngredients(@RequestBody User user) {
         return recipeManagerService.searchRecipeManagerByUserIngredients(user.getUserCurrentIngredients());
@@ -21,5 +38,10 @@ public class RecipeManagerController {
     @PostMapping("recipe")
     public Recipe addRecipe(@RequestBody Recipe newRecipe) {
         return recipeManagerService.addRecipe(newRecipe);
+    }
+
+    @DeleteMapping("recipe/{recipeName}")
+    public String deleteRecipe(@PathVariable String recipeName) {
+        return recipeManagerService.deleteRecipe(recipeName);
     }
 }
