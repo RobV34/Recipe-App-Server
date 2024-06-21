@@ -1,5 +1,6 @@
 package com.recipe.users;
 
+import com.recipe.recipes.Recipe;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -13,5 +14,16 @@ public class UserService {
     public User addUser(User newUser) {
         userList.add(newUser);
         return newUser;
+    }
+
+    public List<User> getAllUsers() {
+        return userList;
+    }
+
+    public User getUser(int userId) {
+        return userList.stream()
+                .filter(user -> user.getUserId() == userId)
+                .findFirst()
+                .orElse(null);
     }
 }
