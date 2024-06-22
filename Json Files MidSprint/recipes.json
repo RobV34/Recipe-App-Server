@@ -1,0 +1,74 @@
+[
+    {
+      "id": 1,
+      "name": "Spaghetti Carbonara",
+      "ingredients": ["Spaghetti", "Eggs", "Pancetta", "Parmesan Cheese"],
+      "instructions": "Boil spaghetti. Fry pancetta. Mix eggs and cheese. Combine all.",
+      "difficulty": 3
+    },
+    {
+      "id": 2,
+      "name": "Tomato Soup",
+      "ingredients": ["Tomatoes", "Onions", "Garlic", "Basil"],
+      "instructions": "Cook all ingredients. Blend until smooth. Serve hot.",
+      "difficulty": 2
+    },
+    {
+      "id": 3,
+      "name": "Grilled Cheese Sandwich",
+      "ingredients": ["Bread", "Butter", "Cheese"],
+      "instructions": "Butter bread. Place cheese between slices. Grill until golden brown.",
+      "difficulty": 1
+    },
+    {
+      "id": 4,
+      "name": "Chicken Curry",
+      "ingredients": ["Chicken", "Curry Powder", "Coconut Milk", "Onions"],
+      "instructions": "Cook chicken. Add onions and curry powder. Add coconut milk. Simmer.",
+      "difficulty": 4
+    },
+    {
+      "id": 5,
+      "name": "Caesar Salad",
+      "ingredients": ["Romaine Lettuce", "Caesar Dressing", "Parmesan Cheese", "Croutons"],
+      "instructions": "Chop lettuce. Toss with dressing, cheese, and croutons.",
+      "difficulty": 2
+    },
+    {
+      "id": 6,
+      "name": "Beef Tacos",
+      "ingredients": ["Ground Beef", "Taco Shells", "Lettuce", "Tomatoes", "Cheese"],
+      "instructions": "Cook beef. Fill taco shells with beef and toppings.",
+      "difficulty": 2
+    },
+    {
+      "id": 7,
+      "name": "Pancakes",
+      "ingredients": ["Flour", "Milk", "Eggs", "Baking Powder"],
+      "instructions": "Mix ingredients. Cook on griddle until golden brown.",
+      "difficulty": 1
+    },
+    {
+      "id": 8,
+      "name": "Chocolate Cake",
+      "ingredients": ["Flour", "Cocoa Powder", "Sugar", "Eggs", "Butter"],
+      "instructions": "Mix ingredients. Bake at 350°F for 30 minutes.",
+      "difficulty": 3
+    },
+    {
+      "id": 9,
+      "name": "Fruit Smoothie",
+      "ingredients": ["Banana", "Berries", "Yogurt", "Honey"],
+      "instructions": "Blend all ingredients until smooth.",
+      "difficulty": 1
+    },
+    {
+      "id": 10,
+      "name": "Lasagna",
+      "ingredients": ["Lasagna Noodles", "Ground Beef", "Tomato Sauce", "Ricotta Cheese", "Mozzarella Cheese"],
+      "instructions": "Layer noodles, meat, and cheeses. Bake at 375°F for 45 minutes.",
+      "difficulty": 4
+    }
+  ]
+  
+  
