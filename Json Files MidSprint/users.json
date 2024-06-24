@@ -1,52 +1,62 @@
 [
     {
       "id": 1,
-      "name": "Alice Smith",
+      "firstName": "Alice",
+      "lastName": "Smith",  
       "email": "alice.smith@example.com"
     },
     {
       "id": 2,
-      "name": "Bob Johnson",
+      "firstName": "Bob",
+      "lastName": "Johnson",  
       "email": "bob.johnson@example.com"
     },
     {
       "id": 3,
-      "name": "Charlie Davis",
+      "firstName": "Charlie",
+      "lastName": "Davis",  
       "email": "charlie.davis@example.com"
     },
     {
       "id": 4,
-      "name": "Diana Brown",
+      "firstName": "Diana",
+      "lastName": "Brown",  
       "email": "diana.brown@example.com"
     },
     {
       "id": 5,
-      "name": "Ethan Miller",
+      "firstName": "Ethan",
+      "lastName": "Miller",  
       "email": "ethan.miller@example.com"
     },
     {
       "id": 6,
-      "name": "Fiona Wilson",
+      "firstName": "Fiona",
+      "lastName": "Wilson",  
       "email": "fiona.wilson@example.com"
     },
     {
       "id": 7,
-      "name": "George Moore",
+      "firstName": "George",
+      "lastName": "Moore",  
       "email": "george.moore@example.com"
     },
     {
       "id": 8,
-      "name": "Hannah Taylor",
+      "firstName": "Hannah",
+      "lastName": "Taylor",  
       "email": "hannah.taylor@example.com"
     },
     {
       "id": 9,
-      "name": "Ian Anderson",
+      "firstName": "Ian",
+      "lastName": "Anderson",  
       "email": "ian.anderson@example.com"
     },
     {
       "id": 10,
-      "name": "Jasmine Thomas",
+      "firstName": "Jasmine",
+      "lastName": "Thomas",  
       "email": "jasmine.thomas@example.com"
     }
   ]
