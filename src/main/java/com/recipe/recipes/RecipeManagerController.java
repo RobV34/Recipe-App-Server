@@ -46,8 +46,14 @@ public class RecipeManagerController {
         return recipeManagerService.searchRecipeManagerByUserIngredients(userId);
     }
 
+    @GetMapping("recipe/noCommonAllergens")
+    public List<Recipe> searchForRecipesWithoutCommonAllergens() {
 
-    @PostMapping("recipe")
+        return recipeManagerService.searchRecipeManagerForNoCommonAllergens();
+    }
+
+
+    @PostMapping("/newRecipe")
     public Recipe addRecipe(@RequestBody Recipe newRecipe) {
         return recipeManagerService.addRecipe(newRecipe);
     }

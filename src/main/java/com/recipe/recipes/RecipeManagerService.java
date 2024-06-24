@@ -59,6 +59,18 @@ public class RecipeManagerService {
     }
     return null;
     }
+
+    public List<Recipe> searchRecipeManagerForNoCommonAllergens() {
+
+        List<Recipe> listOfRecipesNoAllergens = new ArrayList<>();
+       listOfRecipesNoAllergens = recipeArrayList.stream()
+               .filter(recipe -> recipe.getIngredients().stream()
+                       .allMatch(ingredient -> ingredient.getCommonAllergen() == false))
+               .collect(Collectors.toList());
+
+        System.out.println(listOfRecipesNoAllergens);
+        return  listOfRecipesNoAllergens;
+    }
 }
 
 
