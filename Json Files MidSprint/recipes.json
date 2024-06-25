@@ -1,74 +1,240 @@
 [
-    {
-      "id": 1,
-      "name": "Spaghetti Carbonara",
-      "ingredients": ["Spaghetti", "Eggs", "Pancetta", "Parmesan Cheese"],
-      "instructions": "Boil spaghetti. Fry pancetta. Mix eggs and cheese. Combine all.",
-      "difficulty": 3
-    },
-    {
-      "id": 2,
-      "name": "Tomato Soup",
-      "ingredients": ["Tomatoes", "Onions", "Garlic", "Basil"],
-      "instructions": "Cook all ingredients. Blend until smooth. Serve hot.",
-      "difficulty": 2
-    },
-    {
-      "id": 3,
-      "name": "Grilled Cheese Sandwich",
-      "ingredients": ["Bread", "Butter", "Cheese"],
-      "instructions": "Butter bread. Place cheese between slices. Grill until golden brown.",
-      "difficulty": 1
-    },
-    {
-      "id": 4,
-      "name": "Chicken Curry",
-      "ingredients": ["Chicken", "Curry Powder", "Coconut Milk", "Onions"],
-      "instructions": "Cook chicken. Add onions and curry powder. Add coconut milk. Simmer.",
-      "difficulty": 4
-    },
-    {
-      "id": 5,
-      "name": "Caesar Salad",
-      "ingredients": ["Romaine Lettuce", "Caesar Dressing", "Parmesan Cheese", "Croutons"],
-      "instructions": "Chop lettuce. Toss with dressing, cheese, and croutons.",
-      "difficulty": 2
-    },
-    {
-      "id": 6,
-      "name": "Beef Tacos",
-      "ingredients": ["Ground Beef", "Taco Shells", "Lettuce", "Tomatoes", "Cheese"],
-      "instructions": "Cook beef. Fill taco shells with beef and toppings.",
-      "difficulty": 2
-    },
-    {
-      "id": 7,
-      "name": "Pancakes",
-      "ingredients": ["Flour", "Milk", "Eggs", "Baking Powder"],
-      "instructions": "Mix ingredients. Cook on griddle until golden brown.",
-      "difficulty": 1
-    },
-    {
-      "id": 8,
-      "name": "Chocolate Cake",
-      "ingredients": ["Flour", "Cocoa Powder", "Sugar", "Eggs", "Butter"],
-      "instructions": "Mix ingredients. Bake at 350°F for 30 minutes.",
-      "difficulty": 3
-    },
-    {
-      "id": 9,
-      "name": "Fruit Smoothie",
-      "ingredients": ["Banana", "Berries", "Yogurt", "Honey"],
-      "instructions": "Blend all ingredients until smooth.",
-      "difficulty": 1
-    },
-    {
-      "id": 10,
-      "name": "Lasagna",
-      "ingredients": ["Lasagna Noodles", "Ground Beef", "Tomato Sauce", "Ricotta Cheese", "Mozzarella Cheese"],
-      "instructions": "Layer noodles, meat, and cheeses. Bake at 375°F for 45 minutes.",
-      "difficulty": 4
-    }
-  ]
-  
-  
+  {
+    "name": "Spaghetti Carbonara",
+    "ingredients": [
+      {
+        "name": "Spaghetti",
+        "commonAllergen": false
+      },
+      {
+        "name": "Eggs",
+        "commonAllergen": true
+      },
+      {
+        "name": "Pancetta",
+        "commonAllergen": false
+      },
+      {
+        "name": "Parmesan Cheese",
+        "commonAllergen": true
+      }
+    ],
+    "instructions": "Boil spaghetti. Fry pancetta. Mix eggs and cheese. Combine all.",
+    "difficulty": 3
+  },
+  {
+    "name": "Tomato Soup",
+    "ingredients": [
+      {
+        "name": "Tomatoes",
+        "commonAllergen": false
+      },
+      {
+        "name": "Onions",
+        "commonAllergen": false
+      },
+      {
+        "name": "Garlic",
+        "commonAllergen": false
+      },
+      {
+        "name": "Basil",
+        "commonAllergen": false
+      }
+    ],
+    "instructions": "Cook all ingredients. Blend until smooth. Serve hot.",
+    "difficulty": 2
+  },
+  {
+    "name": "Grilled Cheese Sandwich",
+    "ingredients": [
+      {
+        "name": "Bread",
+        "commonAllergen": false
+      },
+      {
+        "name": "Butter",
+        "commonAllergen": false
+      },
+      {
+        "name": "Cheese",
+        "commonAllergen": false
+      }
+    ],
+    "instructions": "Butter bread. Place cheese between slices. Grill until golden brown.",
+    "difficulty": 1
+  },
+  {
+    "name": "Chicken Curry",
+    "ingredients": [
+      {
+        "name": "Chicken",
+        "commonAllergen": false
+      },
+      {
+        "name": "Curry Powder",
+        "commonAllergen": false
+      },
+      {
+        "name": "Coconut Milk",
+        "commonAllergen": false
+      },
+      {
+        "name": "Onions",
+        "commonAllergen": false
+      }
+    ],
+    "instructions": "Cook chicken. Add onions and curry powder. Add coconut milk. Simmer.",
+    "difficulty": 4
+  },
+  {
+    "name": "Caesar Salad",
+    "ingredients": [
+      {
+        "name": "Romaine Lettuce",
+        "commonAllergen": false
+      },
+      {
+        "name": "Caesar Dressing",
+        "commonAllergen": false
+      },
+      {
+        "name": "Parmesan Cheese",
+        "commonAllergen": true
+      },
+      {
+        "name": "Croutons",
+        "commonAllergen": false
+      }
+    ],
+    "instructions": "Chop lettuce. Toss with dressing, cheese, and croutons.",
+    "difficulty": 2
+  },
+  {
+    "name": "Beef Tacos",
+    "ingredients": [
+      {
+        "name": "Ground Beef",
+        "commonAllergen": false
+      },
+      {
+        "name": "Taco Shells",
+        "commonAllergen": false
+      },
+      {
+        "name": "Lettuce",
+        "commonAllergen": false
+      },
+      {
+        "name": "Tomatoes",
+        "commonAllergen": false
+      },
+      {
+        "name": "Cheese",
+        "commonAllergen": true
+      }
+    ],
+    "instructions": "Cook beef. Fill taco shells with beef and toppings.",
+    "difficulty": 2
+  },
+  {
+    "name": "Pancakes",
+    "ingredients": [
+      {
+        "name": "Flour",
+        "commonAllergen": false
+      },
+      {
+        "name": "Milk",
+        "commonAllergen": true
+      },
+      {
+        "name": "Eggs",
+        "commonAllergen": true
+      },
+      {
+        "name": "Baking Powder",
+        "commonAllergen": false
+      }
+    ],
+    "instructions": "Mix ingredients. Cook on griddle until golden brown.",
+    "difficulty": 1
+  },
+  {
+    "name": "Chocolate Cake",
+    "ingredients": [
+      {
+        "name": "Flour",
+        "commonAllergen": false
+      },
+      {
+        "name": "Cocoa Powder",
+        "commonAllergen": false
+      },
+      {
+        "name": "Sugar",
+        "commonAllergen": false
+      },
+      {
+        "name": "Eggs",
+        "commonAllergen": true
+      },
+      {
+        "name": "Butter",
+        "commonAllergen": false
+      }
+    ],
+    "instructions": "Mix ingredients. Bake at 350°F for 30 minutes.",
+    "difficulty": 3
+  },
+  {
+    "name": "Fruit Smoothie",
+    "ingredients": [
+      {
+        "name": "Banana",
+        "commonAllergen": false
+      },
+      {
+        "name": "Berries",
+        "commonAllergen": false
+      },
+      {
+        "name": "Yogurt",
+        "commonAllergen": false
+      },
+      {
+        "name": "Honey",
+        "commonAllergen": false
+      }
+    ],
+    "instructions": "Blend all ingredients until smooth.",
+    "difficulty": 1
+  },
+  {
+    "name": "Lasagna",
+    "ingredients": [
+      {
+        "name": "Lasagna Noodles",
+        "commonAllergen": false
+      },
+      {
+        "name": "Ground Beef",
+        "commonAllergen": false
+      },
+      {
+        "name": "Tomato Sauce",
+        "commonAllergen": false
+      },
+      {
+        "name": "Ricotta Cheese",
+        "commonAllergen": true
+      },
+      {
+        "name": "Mozzarella Cheese",
+        "commonAllergen": true
+      }
+    ],
+    "instructions": "Layer noodles, meat, and cheeses. Bake at 375°F for 45 minutes.",
+    "difficulty": 4
+  }
+]
