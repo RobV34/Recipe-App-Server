@@ -33,9 +33,11 @@ public class RecipeManagerService {
     }
 
     public String deleteRecipe(String name) {
-        recipeArrayList.removeIf(recipe -> recipe.getName().equals(name));
+        String lowerCaseName = name.toLowerCase();
+        recipeArrayList.removeIf(recipe -> recipe.getName().toLowerCase().equals(lowerCaseName));
         return "Recipe removed from list";
     }
+
 
     public List<Recipe> searchRecipeManagerByUserIngredients(int userId) {
 
