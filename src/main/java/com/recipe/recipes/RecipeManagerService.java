@@ -33,9 +33,11 @@ public class RecipeManagerService {
     }
 
     public String deleteRecipe(String name) {
-        recipeArrayList.removeIf(recipe -> recipe.getName().equals(name));
+        String lowerCaseName = name.toLowerCase();
+        recipeArrayList.removeIf(recipe -> recipe.getName().toLowerCase().equals(lowerCaseName));
         return "Recipe removed from list";
     }
+
 
     public List<Recipe> searchRecipeManagerByUserIngredients(int userId) {
 
@@ -52,13 +54,24 @@ public class RecipeManagerService {
 
     public Recipe getSingleRecipeByName(String recipeName) {
 
-    for (Recipe recipe : recipeArrayList) {
-        if (recipe.getName().equalsIgnoreCase(recipeName)) {
-            return recipe;
+        for (Recipe recipe : recipeArrayList) {
+            if (recipe.getName().equalsIgnoreCase(recipeName)) {
+                return recipe;
+            }
         }
+        return null;
     }
-    return null;
+
+    public List<Recipe> searchRecipeManagerForNoCommonAllergens() {
+
+        List<Recipe> listOfRecipesNoAllergens = new ArrayList<>();
+        listOfRecipesNoAllergens = recipeArrayList.stream()
+                .filter(recipe -> recipe.getIngredients().stream()
+                        .allMatch(ingredient -> ingredient.getCommonAllergen() == false))
+                .collect(Collectors.toList());
+
+        System.out.println(listOfRecipesNoAllergens);
+        return  listOfRecipesNoAllergens;
     }
 }
-
 
